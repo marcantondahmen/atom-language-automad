@@ -1,0 +1,7 @@
+".text.html":
+  "Code Tag":
+    prefix: "<@"
+    body: "<@ $0 @>"
+  "Comment Block":
+    prefix: "<#"
+    body: "<# $0 #>"

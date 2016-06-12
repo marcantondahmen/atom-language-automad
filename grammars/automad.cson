@@ -1,0 +1,150 @@
+fileTypes: [
+  "php"
+]
+injectionSelector: "text.html - source.php - comment"
+name: "Automad"
+patterns: [
+  {
+    include: "#comment"
+  }
+  {
+    include: "#content"
+  }
+  {
+    include: "#statements"
+  }
+]
+repository:
+  comment:
+    patterns: [
+      {
+        begin: "\\<#"
+        end: "#\\>"
+        name: "comment.block.automad"
+      }
+    ]
+  content:
+    patterns: [
+      {
+        begin: "@\\{"
+        contentName: "variable.other.automad"
+        end: "\\}"
+        name: "variable.other.automad"
+        patterns: [
+          {
+            include: "#pipe"
+          }
+        ]
+      }
+    ]
+  keywords:
+    patterns: [
+      {
+        match: "(\\b(and|else|end|for|foreach|if|in|next|not|or|prev|snippet|to|with)\\b|[\\<\\>\\=]+)"
+        name: "keyword.other.automad"
+      }
+    ]
+  number:
+    patterns: [
+      {
+        match: "\\b\\d[\\d\\.]*\\b"
+        name: "support.constant.automad"
+      }
+    ]
+  options:
+    patterns: [
+      {
+        begin: "\\{"
+        contentName: "entity.other.attribute-name.automad"
+        end: "\\}"
+        name: "entity.other.attribute-name.automad"
+        patterns: [
+          {
+            include: "#content"
+          }
+          {
+            include: "#string"
+          }
+          {
+            include: "#number"
+          }
+        ]
+      }
+    ]
+  pipe:
+    patterns: [
+      {
+        match: "(?<=\\|)\\s*[\\w\\-]+"
+        name: "entity.other.attribute-name.automad"
+      }
+      {
+        match: "\\|"
+        name: "keyword.control.automad"
+      }
+      {
+        begin: "\\("
+        contentName: "keyword.other.automad"
+        end: "\\)"
+        name: "keyword.control.automad"
+        patterns: [
+          {
+            include: "#string"
+          }
+          {
+            include: "#number"
+          }
+        ]
+      }
+    ]
+  statements:
+    patterns: [
+      {
+        begin: "\\<@"
+        contentName: "support.type.automad"
+        end: "@\\>"
+        name: "keyword.control.automad"
+        patterns: [
+          {
+            include: "#content"
+          }
+          {
+            include: "#string"
+          }
+          {
+            include: "#number"
+          }
+          {
+            include: "#options"
+          }
+          {
+            include: "#keywords"
+          }
+        ]
+      }
+    ]
+  string:
+    patterns: [
+      {
+        begin: "\""
+        contentName: "string.automad"
+        end: "\""
+        name: "string.automad"
+        patterns: [
+          {
+            include: "#content"
+          }
+        ]
+      }
+      {
+        begin: "'"
+        contentName: "string.automad"
+        end: "'"
+        name: "string.automad"
+        patterns: [
+          {
+            include: "#content"
+          }
+        ]
+      }
+    ]
+scopeName: "text.html.automad"

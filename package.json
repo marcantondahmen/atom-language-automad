@@ -1,0 +1,14 @@
+{
+  "name": "atom-language-automad",
+  "version": "0.0.0",
+  "description": "Automad template language support",
+  "keywords": [
+  ],
+  "repository": "",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}
