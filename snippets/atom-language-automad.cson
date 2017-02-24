@@ -5,3 +5,81 @@
   "Comment Block":
     prefix: "<#"
     body: "<# $0 #>"
+  "Foreach":
+    prefix: "foreach @>"
+    body: """
+      <@ foreach in ${1:pagelist} @>
+      	$2
+      <@ end @>
+      """
+    leftLabel: '<@'
+    rightLabelHTML: '<@ foreach in ... @><@ end @>'
+  "Foreach Else":
+    prefix: "foreachelse @>"
+    body: """
+      <@ foreach in ${1:pagelist} @>
+      	$2
+      <@ else @>
+      	$3
+      <@ end @>
+      """
+    leftLabel: '<@'
+    rightLabelHTML: '<@ foreach in ... @><@ else @><@ end @>'
+  "For":
+     prefix: "for @>"
+     body: """
+       <@ for $1 to $2 @>
+       	$3
+       <@ end @>
+       """
+     leftLabel: '<@'
+     rightLabelHTML: '<@ for ... to ... @><@ end @>' 
+  "If":
+     prefix: "if @>"
+     body: """
+       <@ if $1 @>
+       	$2
+       <@ end @>
+       """
+     leftLabel: '<@'
+     rightLabelHTML: '<@ if ... @><@ end @>' 
+  "If Else":
+     prefix: "ifelse @>"
+     body: """
+       <@ if $1 @>
+       	$2
+       <@ else @>
+       	$3
+       <@ end @>
+       """
+     leftLabel: '<@'
+     rightLabelHTML: '<@ if ... @><@ else @><@ end @>' 
+  "Snippet":
+     prefix: "snippet @>"
+     body: """
+       <@ snippet ${1:name} @>
+       	$2
+       <@ end @>
+       """
+     leftLabel: '<@'
+     rightLabelHTML: '<@ snippet ... @><@ end @>' 
+  "With":
+     prefix: "with @>"
+     body: """
+       <@ with $1 @>
+       	$2
+       <@ end @>
+       """
+     leftLabel: '<@'
+     rightLabelHTML: '<@ with ... @><@ end @>'
+  "With Else":
+     prefix: "withelse @>"
+     body: """
+       <@ with $1 @>
+       	$2
+       <@ else @>
+       	$3
+       <@ end @>
+       """
+     leftLabel: '<@'
+     rightLabelHTML: '<@ with ... @><@ else @><@ end @>'
