@@ -71,7 +71,7 @@ repository:
   pipe:
     patterns: [
       {
-        match: "(?<=\\|)\\s*[\\w\\-]+"
+        match: "(?<=\\|)\\s*[\\+\\-\\*\\/]?\\s*[\\w\\-\\.]+"
         name: "entity.other.attribute-name.automad"
       }
       {
