@@ -1,6 +1,8 @@
 {
   "name": "atom-language-automad",
-  "version": "0.0.0",
+  "author": "Marc Anton Dahmen",
+  "homepage": "http://automad.org",
+  "version": "1.0.0",
   "description": "Automad template language support",
   "keywords": [
   ],
