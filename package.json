@@ -2,7 +2,7 @@
   "name": "language-automad",
   "author": "Marc Anton Dahmen",
   "homepage": "http://automad.org",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Automad template language support",
   "keywords": [],
   "repository": "https://github.com/marcantondahmen/atom-language-automad",
