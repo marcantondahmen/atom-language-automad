@@ -1,8 +1,6 @@
-# atom-language-automad package
+# Automad Template Language 
 
-Automad template language support for the Atom editor.  
-
-<http://automad.org>
+Syntax highlighting and snippets for the [Automad](https://automad.org) template language in Atom.
 
 ---
 
