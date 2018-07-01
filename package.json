@@ -2,9 +2,12 @@
   "name": "language-automad",
   "author": "Marc Anton Dahmen",
   "homepage": "http://automad.org",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Automad template language support",
-  "keywords": ["language", "grammar"],
+  "keywords": [
+    "language",
+    "grammar"
+  ],
   "repository": "https://github.com/marcantondahmen/atom-language-automad",
   "license": "MIT",
   "engines": {
