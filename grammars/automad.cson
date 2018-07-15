@@ -90,6 +90,9 @@ repository:
           {
             include: "#number"
           }
+          {
+            include: "#content"
+          }
         ]
       }
     ]
